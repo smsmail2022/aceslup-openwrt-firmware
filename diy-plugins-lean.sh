@@ -33,4 +33,11 @@ cp -r openwrt-package/lienol/package/{tcping,brook,chinadns-ng} `pwd`/feeds/lien
 rm -rf openwrt-package
 
 
+# Add GOST
+mkdir -p `pwd`/feeds/kenzok8
+git clone https://github.com/kenzok8/openwrt-packages
+cp -r openwrt-packages/{gost,luci-app-gost,luci-app-openclash,luci-app-clash} `pwd`/feeds/kenzok8/
+rm -rf openwrt-packages
+
+
 ./scripts/feeds update -a
