@@ -24,9 +24,18 @@ mv $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}/* $WORKINGDIR/
 rmdir $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}
 rm $WORKINGDIR/${LUCIBRANCH}.zip
 
+
 # Add SRP+ dept
 git clone https://github.com/coolsnowwolf/lede
 cp -r lede/package/lean/{tcpping,microsocks,redsocks2} feeds/helloworld/
 rm -rf lede
+
+
+# Add GOST
+mkdir -p `pwd`/feeds/kenzok8
+git clone https://github.com/kenzok8/openwrt-packages
+cp -r openwrt-packages/{gost,luci-app-gost,luci-app-openclash,luci-app-clash} `pwd`/feeds/kenzok8/
+rm -rf openwrt-packages
+
 
 ./scripts/feeds update -a
