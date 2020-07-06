@@ -29,7 +29,7 @@ rm $WORKINGDIR/${LUCIBRANCH}.zip
 mkdir -p `pwd`/feeds/lienol
 git clone https://github.com/Lienol/openwrt-package
 cp -r openwrt-package/lienol/luci-app-passwall `pwd`/feeds/lienol/
-cp -r openwrt-package/lienol/package/{tcping,brook,chinadns-ng} `pwd`/feeds/lienol/
+cp -r openwrt-package/package/{tcping,brook,chinadns-ng} `pwd`/feeds/lienol/
 rm -rf openwrt-package
 
 
