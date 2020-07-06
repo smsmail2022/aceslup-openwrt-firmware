@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Newifi3-d2 lean k4.14.180
+name: 20200706 Newifi3-d2 lean k4.14.180
 
 on:
   repository_dispatch:
@@ -23,23 +23,26 @@ on:
     types: started
 
 env:
-# Lean 5.4
+# ----------------------------------------------- Lean 5.4
 #  REPO_URL: https://github.com/coolsnowwolf/lede
 #  REPO_BRANCH: master
-# Lean 4.14.180
+#  DIY_PLUGINS_SH: diy-plugins-lean.sh
+# ----------------------------------------------- Lean 4.14.180
   REPO_URL: https://github.com/coolsnowwolf/openwrt
   REPO_BRANCH: lede-17.01
-# Lienol 5.4
+  DIY_PLUGINS_SH: diy-plugins-lean.sh
+# ----------------------------------------------- Lienol 5.4
 #  REPO_URL: https://github.com/Lienol/openwrt
 #  REPO_BRANCH: dev-master
 #  REPO_BRANCH: dev
-# Lienol 4.14.180
+#  DIY_PLUGINS_SH: diy-plugins-lienol.sh
+# ----------------------------------------------- Lienol 4.14.180
 #  REPO_URL: https://github.com/Lienol/openwrt
 #  REPO_BRANCH: dev-19.07
+#  DIY_PLUGINS_SH: diy-plugins-lienol.sh
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
-  DIY_PLUGINS_SH: diy-plugins.sh
   DIY_P2_SH: diy-part2.sh
   SSH_ACTIONS: true
   UPLOAD_BIN_DIR: false
