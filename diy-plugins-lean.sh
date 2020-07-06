@@ -26,17 +26,15 @@ rm $WORKINGDIR/${LUCIBRANCH}.zip
 
 
 # Add PSW dep+
-mkdir -p `pwd`/feeds/lienol
 git clone https://github.com/Lienol/openwrt-package
-cp -r openwrt-package/lienol/luci-app-passwall `pwd`/feeds/lienol/
-cp -r openwrt-package/package/{tcping,brook,chinadns-ng} `pwd`/feeds/lienol/
+cp -r openwrt-package/lienol/luci-app-passwall `pwd`/package/lean/
+cp -r openwrt-package/package/{tcping,brook,chinadns-ng} `pwd`/package/lean/
 rm -rf openwrt-package
 
 
-# Add GOST
-mkdir -p `pwd`/feeds/kenzok8
+# Add GOST, CLASH
 git clone https://github.com/kenzok8/openwrt-packages
-cp -r openwrt-packages/{gost,luci-app-gost,luci-app-openclash,luci-app-clash} `pwd`/feeds/kenzok8/
+cp -r openwrt-packages/{gost,luci-app-gost,luci-app-openclash,luci-app-clash} `pwd`/package/lean/
 rm -rf openwrt-packages
 
 
