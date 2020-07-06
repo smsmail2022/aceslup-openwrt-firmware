@@ -25,9 +25,11 @@ rmdir $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}
 rm $WORKINGDIR/${LUCIBRANCH}.zip
 
 
-# Add PSW
+# Add PSW dep+
+mkdir -p `pwd`/feeds/lienol
 git clone https://github.com/Lienol/openwrt-package
-cp -r openwrt-package/lienol/luci-app-passwall `pwd`/feeds/luci/applications/
+cp -r openwrt-package/lienol/luci-app-passwall `pwd`/feeds/lienol/
+cp -r openwrt-package/lienol/package/{tcping,brook,chinadns-ng} `pwd`/feeds/lienol/
 rm -rf openwrt-package
 
 
