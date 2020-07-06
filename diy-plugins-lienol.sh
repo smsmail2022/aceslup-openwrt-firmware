@@ -31,10 +31,9 @@ cp -r lede/package/lean/{tcpping,microsocks,redsocks2} feeds/helloworld/
 rm -rf lede
 
 
-# Add GOST
-mkdir -p `pwd`/feeds/kenzok8
+# Add GOST, CLASH
 git clone https://github.com/kenzok8/openwrt-packages
-cp -r openwrt-packages/{gost,luci-app-gost,luci-app-openclash,luci-app-clash} `pwd`/feeds/kenzok8/
+cp -r openwrt-packages/{gost,luci-app-gost,luci-app-openclash,luci-app-clash} `pwd`/package/lean/
 rm -rf openwrt-packages
 
 
