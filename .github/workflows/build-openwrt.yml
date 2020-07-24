@@ -25,7 +25,7 @@ on:
 env:
 # ----------------------------------------------- Lean 5.4
   REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: Main
+  REPO_BRANCH: master
   DIY_PLUGINS_SH: diy-plugins-lean.sh
 # ----------------------------------------------- Lean 4.14.180
 #  REPO_URL: https://github.com/coolsnowwolf/openwrt
