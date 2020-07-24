@@ -40,6 +40,14 @@ env:
 #  REPO_URL: https://github.com/Lienol/openwrt
 #  REPO_BRANCH: dev-19.07
 #  DIY_PLUGINS_SH: diy-plugins-lienol.sh
+# ----------------------------------------------- HomeLede 4.19.134
+#  REPO_URL: https://github.com/xiaoqingfengATGH/HomeLede.git
+#  REPO_BRANCH: master
+#  DIY_PLUGINS_SH: diy-plugins-homelede.sh
+# ----------------------------------------------- HomeLede 5.4.51
+#  REPO_URL: https://github.com/xiaoqingfengATGH/HomeLede.git
+#  REPO_BRANCH: master
+#  DIY_PLUGINS_SH: diy-plugins-homelede.sh
 
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
