@@ -34,20 +34,20 @@ rm -rf lede
 # Add GOST, CLASH
 git clone https://github.com/kenzok8/openwrt-packages
 cp -r openwrt-packages/{gost,luci-app-gost} `pwd`/package/lean/
-#cp -r openwrt-packages/{luci-app-openclash,luci-app-clash} `pwd`/package/lean/
+cp -r openwrt-packages/{luci-app-openclash,luci-app-clash} `pwd`/package/lean/
 rm -rf openwrt-packages
 
 
 # Add ServerChan
-git clone https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng
-cp -r feeds-xiaoqingfeng/luci-app-serverchan `pwd`/package/lean/
-rm -rf feeds-xiaoqingfeng
+#git clone https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng
+#cp -r feeds-xiaoqingfeng/luci-app-serverchan `pwd`/package/lean/
+#rm -rf feeds-xiaoqingfeng
 
 
 # Add homeclash
-git clone https://github.com/xiaoqingfengATGH/homeclash
-cp -r homeclash/luci-app-openclash `pwd`/package/lean/
-rm -rf homeclash
+#git clone https://github.com/xiaoqingfengATGH/homeclash
+#cp -r homeclash/luci-app-openclash `pwd`/package/lean/
+#rm -rf homeclash
 
 
 ./scripts/feeds update -a
