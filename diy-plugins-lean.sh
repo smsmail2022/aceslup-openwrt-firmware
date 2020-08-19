@@ -25,6 +25,10 @@ rmdir $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}
 rm $WORKINGDIR/${LUCIBRANCH}.zip
 
 
+# Add Kcptun
+git clone https://github.com/kuoruan/luci-app-kcptun.git `pwd`/package/luci-app-kcptun
+
+
 # Add PSW dep+
 git clone https://github.com/Lienol/openwrt-package
 cp -r openwrt-package/lienol/luci-app-passwall `pwd`/package/lean/
