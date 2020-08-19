@@ -25,6 +25,10 @@ rmdir $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}
 rm $WORKINGDIR/${LUCIBRANCH}.zip
 
 
+# Add Kcptun
+git clone https://github.com/kuoruan/luci-app-kcptun.git `pwd`/package/luci-app-kcptun
+
+
 # Add SRP+ dept
 git clone https://github.com/coolsnowwolf/lede
 cp -r lede/package/lean/{tcpping,microsocks,redsocks2} feeds/helloworld/
@@ -39,9 +43,9 @@ rm -rf openwrt-packages
 
 
 # Add ServerChan
-#git clone https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng
-#cp -r feeds-xiaoqingfeng/luci-app-serverchan `pwd`/package/lean/
-#rm -rf feeds-xiaoqingfeng
+git clone https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng
+cp -r feeds-xiaoqingfeng/luci-app-serverchan `pwd`/package/lean/
+rm -rf feeds-xiaoqingfeng
 
 
 # Add homeclash
