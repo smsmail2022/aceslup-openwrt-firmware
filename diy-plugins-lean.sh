@@ -30,10 +30,10 @@ git clone https://github.com/kuoruan/luci-app-kcptun.git `pwd`/package/luci-app-
 
 
 # Add PSW dep+
-git clone https://github.com/Lienol/openwrt-package
-cp -r openwrt-package/lienol/luci-app-passwall `pwd`/package/lean/
-cp -r openwrt-package/package/{tcping,brook,chinadns-ng,trojan-go,trojan-plus} `pwd`/package/lean/
-rm -rf openwrt-package
+#git clone https://github.com/Lienol/openwrt-package
+#cp -r openwrt-package/lienol/luci-app-passwall `pwd`/package/lean/
+#cp -r openwrt-package/package/{tcping,brook,chinadns-ng,trojan-go,trojan-plus} `pwd`/package/lean/
+#rm -rf openwrt-package
 
 
 # Add GOST, CLASH
