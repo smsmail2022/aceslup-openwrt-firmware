@@ -24,9 +24,9 @@ on:
 
 env:
 # ----------------------------------------------- Lean 5.4
-  REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
-  DIY_PLUGINS_SH: diy-plugins-lean.sh
+#  REPO_URL: https://github.com/coolsnowwolf/lede
+#  REPO_BRANCH: master
+#  DIY_PLUGINS_SH: diy-plugins-lean.sh
 # ----------------------------------------------- Lean 4.14
 #  REPO_URL: https://github.com/coolsnowwolf/openwrt
 #  REPO_BRANCH: lede-17.01
@@ -44,10 +44,10 @@ env:
 #  REPO_URL: https://github.com/xiaoqingfengATGH/HomeLede.git
 #  REPO_BRANCH: master
 #  DIY_PLUGINS_SH: diy-plugins-homelede.sh
-# ----------------------------------------------- HomeLede 5.4.51
-#  REPO_URL: https://github.com/xiaoqingfengATGH/HomeLede.git
-#  REPO_BRANCH: k5
-#  DIY_PLUGINS_SH: diy-plugins-homelede.sh
+# ----------------------------------------------- HomeLede 5.4
+  REPO_URL: https://github.com/xiaoqingfengATGH/HomeLede.git
+  REPO_BRANCH: k5
+  DIY_PLUGINS_SH: diy-plugins-homelede.sh
 
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
