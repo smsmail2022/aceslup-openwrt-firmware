@@ -24,9 +24,9 @@ on:
 
 env:
 # ----------------------------------------------- Lean 5.4
-#  REPO_URL: https://github.com/coolsnowwolf/lede
-#  REPO_BRANCH: master
-#  DIY_PLUGINS_SH: diy-plugins-lean.sh
+  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_BRANCH: master
+  DIY_PLUGINS_SH: diy-plugins-lean.sh
 # ----------------------------------------------- Lean 4.14
 #  REPO_URL: https://github.com/coolsnowwolf/openwrt
 #  REPO_BRANCH: lede-17.01
@@ -36,9 +36,9 @@ env:
 #  REPO_BRANCH: dev-master
 #  DIY_PLUGINS_SH: diy-plugins-lienol.sh
 # ----------------------------------------------- Lienol 4.14
-  REPO_URL: https://github.com/Lienol/openwrt
-  REPO_BRANCH: dev-19.07
-  DIY_PLUGINS_SH: diy-plugins-lienol.sh
+#  REPO_URL: https://github.com/Lienol/openwrt
+#  REPO_BRANCH: dev-19.07
+#  DIY_PLUGINS_SH: diy-plugins-lienol.sh
 # ----------------------------------------------- HomeLede 4.19.134
 #  REPO_URL: https://github.com/xiaoqingfengATGH/HomeLede.git
 #  REPO_BRANCH: master
