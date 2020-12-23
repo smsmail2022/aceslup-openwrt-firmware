@@ -67,6 +67,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@main
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
     - name: Initialization environment
       env:
