@@ -56,7 +56,6 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
-  SSH_ACTIONS: true
 
 jobs:
   build:
