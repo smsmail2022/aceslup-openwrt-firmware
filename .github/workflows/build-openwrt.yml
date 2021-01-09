@@ -19,7 +19,6 @@ on:
 
 env:
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: false
@@ -28,6 +27,17 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
+
+# ----------------------------------------------- SSH
+#  CONFIG_FILE: .config
+# ----------------------------------------------- Newifi-D2
+  CONFIG_FILE: newifi-d2.config
+# ----------------------------------------------- HC5661
+#  CONFIG_FILE: hc5661.config
+# ----------------------------------------------- K2
+#  CONFIG_FILE: k2.config
+# ----------------------------------------------- K2P
+#  CONFIG_FILE: k2p.config
 
 # ----------------------------------------------- Lean 5.4
   REPO_URL: https://github.com/coolsnowwolf/lede
