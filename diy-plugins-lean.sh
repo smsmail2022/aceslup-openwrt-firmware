@@ -49,4 +49,12 @@ cp -r feeds-xiaoqingfeng/luci-app-serverchan `pwd`/package/lean/
 rm -rf feeds-xiaoqingfeng
 
 
+# Add HelloWorld, lua-maxminddb dep+
+rm -rf `pwd`/package/lean/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
+git clone https://github.com/jerrykuku/lua-maxminddb.git
+git clone https://github.com/jerrykuku/luci-app-vssr.git 
+mv luci-theme-argon lua-maxminddb luci-app-vssr `pwd`/package/lean/
+
+
 ./scripts/feeds update -a
