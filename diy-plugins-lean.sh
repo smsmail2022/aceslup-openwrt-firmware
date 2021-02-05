@@ -25,6 +25,12 @@ rmdir $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}
 rm $WORKINGDIR/${LUCIBRANCH}.zip
 
 
+# Add luci-app-serverchan
+git clone https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng
+cp -r feeds-xiaoqingfeng/luci-app-serverchan `pwd`/package/lean/
+rm -rf feeds-xiaoqingfeng
+
+
 # Add Kcptun
 #git clone https://github.com/kuoruan/luci-app-kcptun.git `pwd`/package/luci-app-kcptun
 
@@ -36,17 +42,34 @@ rm $WORKINGDIR/${LUCIBRANCH}.zip
 #rm -rf openwrt-package
 
 
+# From 281677160/openwrt-package
+git clone https://github.com/281677160/openwrt-package
 # Add GOST, CLASH
+cp -r openwrt-package/{gost,luci-app-gost} `pwd`/package/lean/
+# Add luci-app-serverchand
+cp -r openwrt-package/luci-app-serverchand `pwd`/package/lean/
+# Add luci-app-socat
+cp -r openwrt-package/luci-app-socat `pwd`/package/lean/
+# Add luci-app-wrtbwmon-zhcn, 替代luci-app-wrtbwmon
+cp -r openwrt-package/luci-app-wrtbwmon-zhcn `pwd`/package/lean/
+# Add luci-app-control-webrestriction, 访问限制
+cp -r openwrt-package/luci-app-wrtbwmon-zhcn `pwd`/package/lean/
+# Add luci-app-control-weburl, 网址过滤
+cp -r openwrt-package/luci-app-control-weburl `pwd`/package/lean/
+# Add luci-app-gowebdav, GoWebDav
+cp -r openwrt-package/luci-app-gowebdav `pwd`/package/lean/
+rm -rf openwrt-package
+
+
+# From kenzok8/openwrt-packages
 git clone https://github.com/kenzok8/openwrt-packages
-cp -r openwrt-packages/{gost,luci-app-gost} `pwd`/package/lean/
-cp -r openwrt-packages/{luci-app-openclash,luci-app-clash} `pwd`/package/lean/
+# Add GOST, CLASH
+#cp -r openwrt-packages/{gost,luci-app-gost} `pwd`/package/lean/
+# Add luci-app-openclash
+cp -r openwrt-packages/luci-app-openclash `pwd`/package/lean/
+# Add luci-app-clash
+cp -r openwrt-packages/luci-app-clash `pwd`/package/lean/
 rm -rf openwrt-packages
-
-
-# Add ServerChan
-git clone https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng
-cp -r feeds-xiaoqingfeng/luci-app-serverchan `pwd`/package/lean/
-rm -rf feeds-xiaoqingfeng
 
 
 # Add HelloWorld, lua-maxminddb dep+
