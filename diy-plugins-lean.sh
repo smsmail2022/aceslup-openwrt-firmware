@@ -51,9 +51,9 @@ cp -r openwrt-package/luci-app-serverchand `pwd`/package/lean/
 # Add luci-app-socat
 cp -r openwrt-package/luci-app-socat `pwd`/package/lean/
 # Add luci-app-wrtbwmon-zhcn, 替代luci-app-wrtbwmon
-cp -r openwrt-package/luci-app-wrtbwmon-zhcn `pwd`/package/lean/
+cp -r openwrt-package/{luci-app-wrtbwmon-zhcn,wrtbwmon} `pwd`/package/lean/
 # Add luci-app-control-webrestriction, 访问限制
-cp -r openwrt-package/luci-app-wrtbwmon-zhcn `pwd`/package/lean/
+cp -r openwrt-package/luci-app-control-webrestriction `pwd`/package/lean/
 # Add luci-app-control-weburl, 网址过滤
 cp -r openwrt-package/luci-app-control-weburl `pwd`/package/lean/
 # Add luci-app-gowebdav, GoWebDav
