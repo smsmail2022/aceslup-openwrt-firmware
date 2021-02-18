@@ -45,7 +45,7 @@ rm -rf feeds-xiaoqingfeng
 # From 281677160/openwrt-package
 git clone https://github.com/281677160/openwrt-package
 # Add luci-app-gost
-#cp -r openwrt-package/{gost,luci-app-gost} `pwd`/package/lean/
+#cp -r openwrt-package/{luci-app-gost,gost} `pwd`/package/lean/
 # Add luci-app-serverchand
 cp -r openwrt-package/luci-app-serverchand `pwd`/package/lean/
 # Add luci-app-socat
@@ -57,14 +57,16 @@ cp -r openwrt-package/luci-app-control-webrestriction `pwd`/package/lean/
 # Add luci-app-control-weburl, 网址过滤
 cp -r openwrt-package/luci-app-control-weburl `pwd`/package/lean/
 # Add luci-app-gowebdav, GoWebDav
-cp -r openwrt-package/luci-app-gowebdav `pwd`/package/lean/
+cp -r openwrt-package/{luci-app-gowebdav,gowebdav} `pwd`/package/lean/
+# Add luci-app-ttnode, 一个运行在openwrt下的甜糖星愿自动采集插件
+cp -r openwrt-package/luci-app-ttnode `pwd`/package/lean/
 rm -rf openwrt-package
 
 
 # From kenzok8/openwrt-packages
 git clone https://github.com/kenzok8/openwrt-packages
 # Add luci-app-gost
-#cp -r openwrt-packages/{gost,luci-app-gost} `pwd`/package/lean/
+#cp -r openwrt-packages/{luci-app-gost,gost} `pwd`/package/lean/
 # Add luci-app-openclash
 cp -r openwrt-packages/luci-app-openclash `pwd`/package/lean/
 # Add luci-app-clash
