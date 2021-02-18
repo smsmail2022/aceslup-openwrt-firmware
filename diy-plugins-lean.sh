@@ -45,11 +45,13 @@ rm -rf feeds-xiaoqingfeng
 # From 281677160/openwrt-package
 git clone https://github.com/281677160/openwrt-package
 # Add GOST, CLASH
-#cp -r openwrt-package/{gost,luci-app-gost} `pwd`/package/lean/
+cp -r openwrt-package/{gost,luci-app-gost} `pwd`/package/lean/
+# Add luci-app-openclash
+cp -r openwrt-package/luci-app-openclash `pwd`/package/lean/
 # Add luci-app-serverchand
 cp -r openwrt-package/luci-app-serverchand `pwd`/package/lean/
 # Add luci-app-socat
-#cp -r openwrt-package/luci-app-socat `pwd`/package/lean/
+cp -r openwrt-package/luci-app-socat `pwd`/package/lean/
 # Add luci-app-wrtbwmon-zhcn, 替代luci-app-wrtbwmon
 cp -r openwrt-package/{luci-app-wrtbwmon-zhcn,wrtbwmon} `pwd`/package/lean/
 # Add luci-app-control-webrestriction, 访问限制
@@ -66,7 +68,7 @@ git clone https://github.com/kenzok8/openwrt-packages
 # Add GOST, CLASH
 #cp -r openwrt-packages/{gost,luci-app-gost} `pwd`/package/lean/
 # Add luci-app-openclash
-cp -r openwrt-packages/luci-app-openclash `pwd`/package/lean/
+#cp -r openwrt-packages/luci-app-openclash `pwd`/package/lean/
 # Add luci-app-clash
 cp -r openwrt-packages/luci-app-clash `pwd`/package/lean/
 rm -rf openwrt-packages
