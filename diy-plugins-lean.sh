@@ -44,10 +44,8 @@ rm -rf feeds-xiaoqingfeng
 
 # From 281677160/openwrt-package
 git clone https://github.com/281677160/openwrt-package
-# Add GOST, CLASH
-cp -r openwrt-package/{gost,luci-app-gost} `pwd`/package/lean/
-# Add luci-app-openclash
-cp -r openwrt-package/luci-app-openclash `pwd`/package/lean/
+# Add luci-app-gost
+#cp -r openwrt-package/{gost,luci-app-gost} `pwd`/package/lean/
 # Add luci-app-serverchand
 cp -r openwrt-package/luci-app-serverchand `pwd`/package/lean/
 # Add luci-app-socat
@@ -65,10 +63,10 @@ rm -rf openwrt-package
 
 # From kenzok8/openwrt-packages
 git clone https://github.com/kenzok8/openwrt-packages
-# Add GOST, CLASH
+# Add luci-app-gost
 #cp -r openwrt-packages/{gost,luci-app-gost} `pwd`/package/lean/
 # Add luci-app-openclash
-#cp -r openwrt-packages/luci-app-openclash `pwd`/package/lean/
+cp -r openwrt-packages/luci-app-openclash `pwd`/package/lean/
 # Add luci-app-clash
 cp -r openwrt-packages/luci-app-clash `pwd`/package/lean/
 rm -rf openwrt-packages
