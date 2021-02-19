@@ -45,7 +45,7 @@ rm -rf feeds-xiaoqingfeng
 # From 281677160/openwrt-package
 git clone https://github.com/281677160/openwrt-package
 # Add luci-app-gost
-#cp -r openwrt-package/{luci-app-gost,gost} `pwd`/package/lean/
+cp -r openwrt-package/{luci-app-gost,gost} `pwd`/package/lean/
 # Add luci-app-serverchand
 cp -r openwrt-package/luci-app-serverchand `pwd`/package/lean/
 # Add luci-app-socat
