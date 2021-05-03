@@ -40,13 +40,13 @@ env:
 #  CONFIG_FILE: k2p.config
 
 # ----------------------------------------------- Lean 5.4
-#  REPO_URL: https://github.com/coolsnowwolf/lede
-#  REPO_BRANCH: master
-#  DIY_PLUGINS_SH: diy-plugins-lean.sh
-# ----------------------------------------------- Lean 4.14
-  REPO_URL: https://github.com/coolsnowwolf/openwrt
-  REPO_BRANCH: lede-17.01
+  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_BRANCH: master
   DIY_PLUGINS_SH: diy-plugins-lean.sh
+# ----------------------------------------------- Lean 4.14
+#  REPO_URL: https://github.com/coolsnowwolf/openwrt
+#  REPO_BRANCH: lede-17.01
+#  DIY_PLUGINS_SH: diy-plugins-lean.sh
 # ----------------------------------------------- Lienol 5.4
 #  REPO_URL: https://github.com/Lienol/openwrt
 #  REPO_BRANCH: dev-master
