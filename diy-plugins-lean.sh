@@ -64,6 +64,10 @@ cp -r openwrt-package/luci-app-ttnode `pwd`/package/lean/
 cp -r openwrt-package/luci-app-syncthing `pwd`/package/lean/
 # Add luci-app-oaf, OpenAppFilter应用过滤, 该模块只工作在路由模式, 旁路模式/桥模式不生效, 和Turbo ACC 网络加速有冲突
 cp -r openwrt-package/luci-app-oaf `pwd`/package/lean/
+# Add luci-app-autotimeset, 定时重启、定时关机、定时重启网络，替代luci-app-autoreboot，不能同时编译
+cp -r openwrt-package/luci-app-autotimeset `pwd`/package/lean/
+# Add luci-app-ddnsto, DDNSTO 通过穿透技术，不需要公网 IP 也可以访问内网设备
+cp -r openwrt-package/luci-app-ddnsto `pwd`/package/lean/
 rm -rf openwrt-package
 
 
