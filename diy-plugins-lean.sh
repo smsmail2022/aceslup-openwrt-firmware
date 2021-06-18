@@ -70,14 +70,14 @@ rm -rf openwrt-package
 
 
 # From kenzok8/openwrt-packages
-git clone https://github.com/kenzok8/openwrt-packages
-# Add luci-app-gost
-cp -r openwrt-packages/{luci-app-gost,gost} `pwd`/package/lean/
-# Add luci-app-openclash
-cp -r openwrt-packages/luci-app-openclash `pwd`/package/lean/
-# Add luci-app-clash
-cp -r openwrt-packages/luci-app-clash `pwd`/package/lean/
-rm -rf openwrt-packages
+#git clone https://github.com/kenzok8/openwrt-packages
+## Add luci-app-gost
+#cp -r openwrt-packages/{luci-app-gost,gost} `pwd`/package/lean/
+## Add luci-app-openclash
+#cp -r openwrt-packages/luci-app-openclash `pwd`/package/lean/
+## Add luci-app-clash
+#cp -r openwrt-packages/luci-app-clash `pwd`/package/lean/
+#rm -rf openwrt-packages
 
 
 # Add HelloWorld, lua-maxminddb dep+
