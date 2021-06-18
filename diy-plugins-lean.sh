@@ -42,31 +42,31 @@ rm $WORKINGDIR/${LUCIBRANCH}.zip
 #rm -rf openwrt-package
 
 
-## From 281677160/openwrt-package
-#git clone https://github.com/281677160/openwrt-package
-#GITCLONE_APP="openwrt-package/feeds/luci/applications"
-#GITCLONE_NET="openwrt-package/feeds/packages/net"
-#GITCLONE_UTILS="openwrt-package/feeds/packages/utils"
-#
-#LUCI_APP_PATH="`pwd`/feeds/luci/applications"
-#LUCI_NET_PATH="`pwd`/feeds/packages/net"
-#LUCI_UTILS_PATH="`pwd`/feeds/packages/utils"
+# From 281677160/openwrt-package
+git clone https://github.com/281677160/openwrt-package
+GITCLONE_APP="openwrt-package/feeds/luci/applications"
+GITCLONE_NET="openwrt-package/feeds/packages/net"
+GITCLONE_UTILS="openwrt-package/feeds/packages/utils"
 
-## Add gost
-#mv ${GITCLONE_APP}/luci-app-gost ${LUCI_APP_PATH}/
-#mv ${GITCLONE_NET}/gost ${LUCI_NET_PATH}/
-## Add gowebdav
-#mv ${GITCLONE_APP}/luci-app-gowebdav ${LUCI_APP_PATH}/
-#mv ${GITCLONE_NET}/gowebdav ${LUCI_NET_PATH}/
-## Add luci-app-syncthing
-#mv ${GITCLONE_APP}/luci-app-syncthing ${LUCI_APP_PATH}/
-## Add luci-app-pushbot
-#mv ${GITCLONE_APP}/luci-app-pushbot ${LUCI_APP_PATH}/
-## Add luci-app-serverchan
-#mv ${GITCLONE_APP}/luci-app-serverchan ${LUCI_APP_PATH}/
-## Add luci-app-ttnode
-#mv ${GITCLONE_APP}/luci-app-ttnode ${LUCI_APP_PATH}/
-#rm -rf openwrt-package
+LUCI_APP_PATH="`pwd`/feeds/luci/applications"
+LUCI_NET_PATH="`pwd`/feeds/packages/net"
+LUCI_UTILS_PATH="`pwd`/feeds/packages/utils"
+
+# Add gost
+mv ${GITCLONE_APP}/luci-app-gost ${LUCI_APP_PATH}/
+mv ${GITCLONE_NET}/gost ${LUCI_NET_PATH}/
+# Add gowebdav
+mv ${GITCLONE_APP}/luci-app-gowebdav ${LUCI_APP_PATH}/
+mv ${GITCLONE_NET}/gowebdav ${LUCI_NET_PATH}/
+# Add luci-app-syncthing
+mv ${GITCLONE_APP}/luci-app-syncthing ${LUCI_APP_PATH}/
+# Add luci-app-pushbot
+mv ${GITCLONE_APP}/luci-app-pushbot ${LUCI_APP_PATH}/
+# Add luci-app-serverchan
+mv ${GITCLONE_APP}/luci-app-serverchan ${LUCI_APP_PATH}/
+# Add luci-app-ttnode
+mv ${GITCLONE_APP}/luci-app-ttnode ${LUCI_APP_PATH}/
+rm -rf openwrt-package
 
 
 # From kenzok8/openwrt-packages
@@ -88,4 +88,4 @@ rm $WORKINGDIR/${LUCIBRANCH}.zip
 #mv luci-theme-argon lua-maxminddb luci-app-vssr `pwd`/package/lean/
 
 
-#./scripts/feeds update -a
+./scripts/feeds update -a
