@@ -26,9 +26,9 @@ rm $WORKINGDIR/${LUCIBRANCH}.zip
 
 
 # Add luci-app-serverchan
-git clone https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng
-cp -r feeds-xiaoqingfeng/luci-app-serverchan `pwd`/package/lean/
-rm -rf feeds-xiaoqingfeng
+#git clone https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng
+#cp -r feeds-xiaoqingfeng/luci-app-serverchan `pwd`/package/lean/
+#rm -rf feeds-xiaoqingfeng
 
 
 # Add Kcptun
@@ -44,18 +44,29 @@ rm -rf feeds-xiaoqingfeng
 
 # From 281677160/openwrt-package
 git clone https://github.com/281677160/openwrt-package
-mv openwrt-package `pwd`/package/openwrt_281677160/
+GITCLONE_APP="openwrt-package/feeds/luci/applications"
+GITCLONE_NET="openwrt-package/feeds/packages/net"
+GITCLONE_UTILS="openwrt-package/feeds/packages/utils"
+
+LUCI_APP_PATH="`pwd`/feeds/luci/applications"
+LUCI_NET_PATH="`pwd`/feeds/packages/net"
+LUCI_UTILS_PATH="`pwd`/feeds/packages/utils"
+
+# Add gost
+mv ${GITCLONE_APP}/luci-app-gost ${LUCI_APP_PATH}/
+mv ${GITCLONE_NET}/gost ${LUCI_NET_PATH}/
+rm -rf openwrt-package
 
 
 # From kenzok8/openwrt-packages
-git clone https://github.com/kenzok8/openwrt-packages
+#git clone https://github.com/kenzok8/openwrt-packages
 # Add luci-app-gost
 #cp -r openwrt-packages/{luci-app-gost,gost} `pwd`/package/lean/
 # Add luci-app-openclash
-cp -r openwrt-packages/luci-app-openclash `pwd`/package/lean/
+#cp -r openwrt-packages/luci-app-openclash `pwd`/package/lean/
 # Add luci-app-clash
-cp -r openwrt-packages/luci-app-clash `pwd`/package/lean/
-rm -rf openwrt-packages
+#cp -r openwrt-packages/luci-app-clash `pwd`/package/lean/
+#rm -rf openwrt-packages
 
 
 # Add HelloWorld, lua-maxminddb dep+
