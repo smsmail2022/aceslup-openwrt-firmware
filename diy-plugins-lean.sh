@@ -55,18 +55,29 @@ LUCI_UTILS_PATH="`pwd`/feeds/packages/utils"
 # Add gost
 mv ${GITCLONE_APP}/luci-app-gost ${LUCI_APP_PATH}/
 mv ${GITCLONE_NET}/gost ${LUCI_NET_PATH}/
+# Add gowebdav
+mv ${GITCLONE_APP}/luci-app-gowebdav ${LUCI_APP_PATH}/
+mv ${GITCLONE_NET}/gowebdav ${LUCI_NET_PATH}/
+# Add luci-app-syncthing
+mv ${GITCLONE_APP}/luci-app-syncthing ${LUCI_APP_PATH}/
+# Add luci-app-pushbot
+mv ${GITCLONE_APP}/luci-app-pushbot ${LUCI_APP_PATH}/
+# Add luci-app-serverchan
+mv ${GITCLONE_APP}/luci-app-serverchan ${LUCI_APP_PATH}/
+# Add luci-app-ttnode
+mv ${GITCLONE_APP}/luci-app-ttnode ${LUCI_APP_PATH}/
 rm -rf openwrt-package
 
 
 # From kenzok8/openwrt-packages
-#git clone https://github.com/kenzok8/openwrt-packages
+git clone https://github.com/kenzok8/openwrt-packages
 # Add luci-app-gost
-#cp -r openwrt-packages/{luci-app-gost,gost} `pwd`/package/lean/
+cp -r openwrt-packages/{luci-app-gost,gost} `pwd`/package/lean/
 # Add luci-app-openclash
-#cp -r openwrt-packages/luci-app-openclash `pwd`/package/lean/
+cp -r openwrt-packages/luci-app-openclash `pwd`/package/lean/
 # Add luci-app-clash
-#cp -r openwrt-packages/luci-app-clash `pwd`/package/lean/
-#rm -rf openwrt-packages
+cp -r openwrt-packages/luci-app-clash `pwd`/package/lean/
+rm -rf openwrt-packages
 
 
 # Add HelloWorld, lua-maxminddb dep+
