@@ -44,31 +44,7 @@ rm -rf feeds-xiaoqingfeng
 
 # From 281677160/openwrt-package
 git clone https://github.com/281677160/openwrt-package
-# Add luci-app-gost, 加密隧道
-cp -r openwrt-package/{luci-app-gost,gost} `pwd`/package/lean/
-# Add luci-app-serverchand, 钉钉
-cp -r openwrt-package/luci-app-serverchand `pwd`/package/lean/
-# Add luci-app-socat, 端口转发
-cp -r openwrt-package/luci-app-socat `pwd`/package/lean/
-# Add luci-app-smartinfo, 磁盘监控, 该工具帮助您通过S.M.A.R.T技术来监控您硬盘的健康状况
-cp -r openwrt-package/luci-app-smartinfo `pwd`/package/lean/
-# Add luci-app-control-webrestriction, 访问限制
-cp -r openwrt-package/luci-app-control-webrestriction `pwd`/package/lean/
-# Add luci-app-control-weburl, 网址过滤
-cp -r openwrt-package/luci-app-control-weburl `pwd`/package/lean/
-# Add luci-app-gowebdav, GoWebDav
-cp -r openwrt-package/{luci-app-gowebdav,gowebdav} `pwd`/package/lean/
-# Add luci-app-ttnode, 一个运行在openwrt下的甜糖星愿自动采集插件
-cp -r openwrt-package/luci-app-ttnode `pwd`/package/lean/
-# Add luci-app-syncthing, 一个连续的文件同步程序, 它在两台或多台计算机之间同步文件
-cp -r openwrt-package/luci-app-syncthing `pwd`/package/lean/
-# Add luci-app-oaf, OpenAppFilter应用过滤, 该模块只工作在路由模式, 旁路模式/桥模式不生效, 和Turbo ACC 网络加速有冲突
-cp -r openwrt-package/luci-app-oaf `pwd`/package/lean/
-# Add luci-app-autotimeset, 定时重启、定时关机、定时重启网络，替代luci-app-autoreboot，不能同时编译
-cp -r openwrt-package/luci-app-autotimeset `pwd`/package/lean/
-# Add luci-app-ddnsto, DDNSTO 通过穿透技术，不需要公网 IP 也可以访问内网设备
-cp -r openwrt-package/luci-app-ddnsto `pwd`/package/lean/
-rm -rf openwrt-package
+mv openwrt-package `pwd`/package/openwrt_281677160/
 
 
 # From kenzok8/openwrt-packages
