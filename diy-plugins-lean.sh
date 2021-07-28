@@ -89,12 +89,12 @@ rm -rf openwrt-package
 
 
 # Add openwrt-xray, luci-app-xray
-git clone https://github.com/yichya/openwrt-xray
-git clone https://github.com/yichya/luci-app-xray
-LUCI_NET_PATH="`pwd`/feeds/packages/net"
-LUCI_APP_PATH="`pwd`/feeds/luci/applications"
-mv openwrt-xray ${LUCI_NET_PATH}
-mv luci-app-xray ${LUCI_APP_PATH}
+#git clone https://github.com/yichya/openwrt-xray
+#git clone https://github.com/yichya/luci-app-xray
+#LUCI_NET_PATH="`pwd`/feeds/packages/net"
+#LUCI_APP_PATH="`pwd`/feeds/luci/applications"
+#mv openwrt-xray ${LUCI_NET_PATH}
+#mv luci-app-xray ${LUCI_APP_PATH}
 
 
 ./scripts/feeds update -a
