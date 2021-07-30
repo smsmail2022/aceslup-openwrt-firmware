@@ -30,28 +30,66 @@ git clone https://github.com/kuoruan/luci-app-kcptun.git `pwd`/package/luci-app-
 
 
 # Add SRP+ dept
-git clone https://github.com/coolsnowwolf/lede
-cp -r lede/package/lean/{tcpping,microsocks,redsocks2} feeds/helloworld/
-rm -rf lede
-
-
-# Add GOST, CLASH
-git clone https://github.com/kenzok8/openwrt-packages
-cp -r openwrt-packages/{gost,luci-app-gost} `pwd`/package/lean/
-cp -r openwrt-packages/{luci-app-openclash,luci-app-clash} `pwd`/package/lean/
-rm -rf openwrt-packages
+#git clone https://github.com/coolsnowwolf/lede
+#cp -r lede/package/lean/{tcpping,microsocks,redsocks2} feeds/helloworld/
+#rm -rf lede
 
 
 # Add ServerChan
-git clone https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng
-cp -r feeds-xiaoqingfeng/luci-app-serverchan `pwd`/package/lean/
-rm -rf feeds-xiaoqingfeng
+#git clone https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng
+#cp -r feeds-xiaoqingfeng/luci-app-serverchan `pwd`/package/lean/
+#rm -rf feeds-xiaoqingfeng
 
 
 # Add homeclash
 #git clone https://github.com/xiaoqingfengATGH/homeclash
 #cp -r homeclash/luci-app-openclash `pwd`/package/lean/
 #rm -rf homeclash
+
+# From 281677160/openwrt-package
+git clone https://github.com/281677160/openwrt-package
+GITCLONE_APP="openwrt-package/feeds/luci/applications"
+GITCLONE_NET="openwrt-package/feeds/packages/net"
+GITCLONE_UTILS="openwrt-package/feeds/packages/utils"
+
+LUCI_APP_PATH="`pwd`/feeds/luci/applications"
+LUCI_NET_PATH="`pwd`/feeds/packages/net"
+LUCI_UTILS_PATH="`pwd`/feeds/packages/utils"
+
+# Add gost
+mv ${GITCLONE_APP}/luci-app-gost ${LUCI_APP_PATH}/
+mv ${GITCLONE_NET}/gost ${LUCI_NET_PATH}/
+# Add gowebdav
+mv ${GITCLONE_APP}/luci-app-gowebdav ${LUCI_APP_PATH}/
+mv ${GITCLONE_NET}/gowebdav ${LUCI_NET_PATH}/
+# Add luci-app-syncthing
+mv ${GITCLONE_APP}/luci-app-syncthing ${LUCI_APP_PATH}/
+# Add luci-app-pushbot
+mv ${GITCLONE_APP}/luci-app-pushbot ${LUCI_APP_PATH}/
+# Add luci-app-serverchan
+mv ${GITCLONE_APP}/luci-app-serverchan ${LUCI_APP_PATH}/
+# Add luci-app-ttnode
+mv ${GITCLONE_APP}/luci-app-ttnode ${LUCI_APP_PATH}/
+rm -rf openwrt-package
+
+
+# From kenzok8/openwrt-packages
+#git clone https://github.com/kenzok8/openwrt-packages
+## Add luci-app-gost
+#cp -r openwrt-packages/{luci-app-gost,gost} `pwd`/package/lean/
+## Add luci-app-openclash
+#cp -r openwrt-packages/luci-app-openclash `pwd`/package/lean/
+## Add luci-app-clash
+#cp -r openwrt-packages/luci-app-clash `pwd`/package/lean/
+#rm -rf openwrt-packages
+
+
+# Add HelloWorld, lua-maxminddb dep+
+#rm -rf `pwd`/package/lean/luci-theme-argon
+#git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
+#git clone https://github.com/jerrykuku/lua-maxminddb.git
+#git clone https://github.com/jerrykuku/luci-app-vssr.git 
+#mv luci-theme-argon lua-maxminddb luci-app-vssr `pwd`/package/lean/
 
 
 ./scripts/feeds update -a
