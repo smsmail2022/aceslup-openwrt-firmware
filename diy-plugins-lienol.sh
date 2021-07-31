@@ -25,6 +25,12 @@ rmdir $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}
 rm $WORKINGDIR/${LUCIBRANCH}.zip
 
 
+# Add PassWall
+git clone https://github.com/xiaorouji/openwrt-passwall.git
+mv openwrt-passwall/* `pwd`/package/lean/
+rm -rf openwrt-passwall
+
+
 # Add Kcptun
 git clone https://github.com/kuoruan/luci-app-kcptun.git `pwd`/package/luci-app-kcptun
 
@@ -45,6 +51,7 @@ git clone https://github.com/kuoruan/luci-app-kcptun.git `pwd`/package/luci-app-
 #git clone https://github.com/xiaoqingfengATGH/homeclash
 #cp -r homeclash/luci-app-openclash `pwd`/package/lean/
 #rm -rf homeclash
+
 
 # From 281677160/openwrt-package
 git clone https://github.com/281677160/openwrt-package
