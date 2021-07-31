@@ -26,9 +26,9 @@ rm $WORKINGDIR/${LUCIBRANCH}.zip
 
 
 # Add PassWall
-git clone https://github.com/xiaorouji/openwrt-passwall.git
-mv openwrt-passwall/* `pwd`/package/lean/
-rm -rf openwrt-passwall
+#git clone https://github.com/xiaorouji/openwrt-passwall.git
+#mv openwrt-passwall/* `pwd`/package/lean/
+#rm -rf openwrt-passwall
 
 
 # Add Kcptun
@@ -69,8 +69,8 @@ mv ${GITCLONE_NET}/gost ${LUCI_NET_PATH}/
 # Add gowebdav
 mv ${GITCLONE_APP}/luci-app-gowebdav ${LUCI_APP_PATH}/
 mv ${GITCLONE_NET}/gowebdav ${LUCI_NET_PATH}/
-# Add luci-app-syncthing
-mv ${GITCLONE_APP}/luci-app-syncthing ${LUCI_APP_PATH}/
+## Add luci-app-syncthing
+#mv ${GITCLONE_APP}/luci-app-syncthing ${LUCI_APP_PATH}/
 # Add luci-app-pushbot
 mv ${GITCLONE_APP}/luci-app-pushbot ${LUCI_APP_PATH}/
 # Add luci-app-serverchan
