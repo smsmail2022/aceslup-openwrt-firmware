@@ -36,7 +36,7 @@ git clone https://github.com/kuoruan/luci-app-kcptun.git `pwd`/package/luci-app-
 
 
 # Add luci-app-jd-dailybonus
-git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git `pwd`/package/luci-app-jd-dailybonus
+git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git `pwd`/package/lean/luci-app-jd-dailybonus
 
 
 # Add SRP+ dept
