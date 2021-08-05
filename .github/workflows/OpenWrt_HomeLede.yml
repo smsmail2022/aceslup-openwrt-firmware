@@ -67,8 +67,8 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        git clone $REPO_URL openwrt
-        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+        git clone $REPO_URL HomeLede
+        ln -sf /workdir/HomeLede $GITHUB_WORKSPACE/openwrt
         
     - name: Checkout origin/k5
       run: |
