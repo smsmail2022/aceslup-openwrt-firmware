@@ -70,10 +70,10 @@ jobs:
         git clone $REPO_URL HomeLede
         ln -sf /workdir/HomeLede $GITHUB_WORKSPACE/openwrt
         
-    - name: Checkout origin/k5
-      run: |
-        cd openwrt
-        git checkout -b k5 origin/k5
+#    - name: Checkout origin/k5
+#      run: |
+#        cd openwrt
+#        git checkout -b k5 origin/k5
 
     - name: prepareCompile.sh
       run: |
