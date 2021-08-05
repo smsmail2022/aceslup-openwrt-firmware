@@ -18,9 +18,11 @@ on:
         default: 'true'
 
 env:
+  REPO_URL: https://github.com/x-wrt/x-wrt.git
   FEEDS_CONF: feeds.conf.default
-  DIY_P1_SH: diy-part1-Xwrt.sh
+  DIY_P1_SH: diy-part1-xwrt.sh
   DIY_P2_SH: diy-part2.sh
+  DIY_PLUGINS_SH: diy-plugins-xwrt.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
@@ -39,10 +41,6 @@ env:
 # ----------------------------------------------- K2P
 #  CONFIG_FILE: k2p.config
 
-# ----------------------------------------------- X-wrt
-  REPO_URL: https://github.com/x-wrt/x-wrt.git
-  REPO_BRANCH: main
-  DIY_PLUGINS_SH: diy-plugins-Xwrt.sh
 
 jobs:
   build:
@@ -69,7 +67,7 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        git clone -b $REPO_BRANCH --single-branch $REPO_URL openwrt
+        git clone $REPO_URL openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
     - name: Load custom feeds
