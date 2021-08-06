@@ -10,7 +10,7 @@
 
 # Add 3rd packages lean: ssr+
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-#sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
+sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
 
 # Add 3rd packages lienol: passwall,syncthing
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
