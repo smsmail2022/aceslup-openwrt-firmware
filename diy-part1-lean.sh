@@ -22,6 +22,3 @@ sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.de
 
 # Add 3rd packages homelede: homeconnect,ssr+,smartdns,serverchan,jd-dailybonus
 #sed -i '$a src-git xiaoqingfeng https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng' feeds.conf.default
-
-# Add 3rd packages 281677160: clash,openclash,vssr,gost,gowebdav,pushbot,serverchan,smartdns,syncthing,ttnode,oaf
-sed -i '$a src-git 281677160 https://github.com/281677160/openwrt-package' feeds.conf.default
