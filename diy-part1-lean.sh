@@ -21,4 +21,4 @@ sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.de
 #sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 
 # Add 3rd packages homelede: homeconnect,ssr+,smartdns,serverchan,jd-dailybonus
-sed -i '$a src-git xiaoqingfeng https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng' feeds.conf.default
+#sed -i '$a src-git xiaoqingfeng https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng' feeds.conf.default
