@@ -29,13 +29,6 @@ rm $WORKINGDIR/${LUCIBRANCH}.zip
 #git clone https://github.com/kuoruan/luci-app-kcptun.git `pwd`/package/luci-app-kcptun
 
 
-# Add PSW dep+
-#git clone https://github.com/Lienol/openwrt-package
-#cp -r openwrt-package/lienol/luci-app-passwall `pwd`/package/lean/
-#cp -r openwrt-package/package/{tcping,brook,chinadns-ng,trojan-go,trojan-plus} `pwd`/package/lean/
-#rm -rf openwrt-package
-
-
 # From 281677160/openwrt-package: clash,openclash,vssr,gost,gowebdav,pushbot,serverchan,smartdns,syncthing,ttnode,oaf
 git clone https://github.com/281677160/openwrt-package
 GITCLONE_APP="openwrt-package/feeds/luci/applications"
@@ -53,7 +46,7 @@ mv ${GITCLONE_NET}/gost ${LUCI_NET_PATH}/
 mv ${GITCLONE_APP}/luci-app-gowebdav ${LUCI_APP_PATH}/
 mv ${GITCLONE_NET}/gowebdav ${LUCI_NET_PATH}/
 # Add luci-app-syncthing
-mv ${GITCLONE_APP}/luci-app-syncthing ${LUCI_APP_PATH}/
+#mv ${GITCLONE_APP}/luci-app-syncthing ${LUCI_APP_PATH}/
 # Add luci-app-pushbot
 mv ${GITCLONE_APP}/luci-app-pushbot ${LUCI_APP_PATH}/
 # Add luci-app-serverchan
@@ -63,7 +56,7 @@ mv ${GITCLONE_APP}/luci-app-ttnode ${LUCI_APP_PATH}/
 rm -rf openwrt-package
 
 
-# From kenzok8/openwrt-packages
+# From kenzok8/openwrt-packages: passwall,ssr+,vssr,gost,smartdns,serverchan,jd-dailybonus
 #git clone https://github.com/kenzok8/openwrt-packages
 # Add luci-app-gost
 #cp -r openwrt-packages/{luci-app-gost,gost} `pwd`/package/lean/
@@ -91,10 +84,10 @@ rm -rf openwrt-package
 #mv luci-app-xray ${LUCI_APP_PATH}
 
 
-# From xiaoqingfengATGH/feeds-xiaoqingfeng
+# From xiaoqingfengATGH/feeds-xiaoqingfeng: homeconnect,ssr+,smartdns,serverchan,jd-dailybonus
 # Add luci-app-homeconnect
-git clone https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng.git
-mv feeds-xiaoqingfeng/luci-app-homeconnect `pwd`/package/lean/
-mv feeds-xiaoqingfeng/softethervpn5 `pwd`/package/lean/
-rm -rf feeds-xiaoqingfeng
+#git clone https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng.git
+#mv feeds-xiaoqingfeng/luci-app-homeconnect `pwd`/package/lean/
+#mv feeds-xiaoqingfeng/softethervpn5 `pwd`/package/lean/
+#rm -rf feeds-xiaoqingfeng
 
