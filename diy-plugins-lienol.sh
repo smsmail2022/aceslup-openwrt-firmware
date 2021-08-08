@@ -30,7 +30,7 @@ rm $WORKINGDIR/${LUCIBRANCH}.zip
 
 
 ## Add luci-app-jd-dailybonus
-#git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git `pwd`/package/lean/luci-app-jd-dailybonus
+git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git `pwd`/package/lean/luci-app-jd-dailybonus
 
 
 ## Add ServerChan
@@ -56,7 +56,7 @@ mv ${GITCLONE_NET}/gost ${LUCI_NET_PATH}/
 mv ${GITCLONE_APP}/luci-app-gowebdav ${LUCI_APP_PATH}/
 mv ${GITCLONE_NET}/gowebdav ${LUCI_NET_PATH}/
 # Add luci-app-syncthing
-#mv ${GITCLONE_APP}/luci-app-syncthing ${LUCI_APP_PATH}/
+mv ${GITCLONE_APP}/luci-app-syncthing ${LUCI_APP_PATH}/
 # Add luci-app-pushbot
 mv ${GITCLONE_APP}/luci-app-pushbot ${LUCI_APP_PATH}/
 # Add luci-app-serverchan
