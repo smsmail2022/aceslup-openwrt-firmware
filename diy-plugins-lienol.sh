@@ -98,6 +98,3 @@ rm -rf openwrt-package
 #git clone https://github.com/xiaoqingfengATGH/homeclash
 #cp -r homeclash/luci-app-openclash `pwd`/package/lean/
 #rm -rf homeclash
-
-
-./scripts/feeds update -a
