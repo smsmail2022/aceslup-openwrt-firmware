@@ -29,10 +29,6 @@ rm $WORKINGDIR/${LUCIBRANCH}.zip
 #git clone https://github.com/kuoruan/luci-app-kcptun.git `pwd`/package/luci-app-kcptun
 
 
-## Add luci-app-jd-dailybonus
-git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git `pwd`/package/lean/luci-app-jd-dailybonus
-
-
 ## Add ServerChan
 #git clone https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng
 #cp -r feeds-xiaoqingfeng/luci-app-serverchan `pwd`/package/lean/
@@ -87,10 +83,10 @@ rm -rf openwrt-package
 
 # From xiaoqingfengATGH/feeds-xiaoqingfeng: homeconnect,ssr+,smartdns,serverchan,jd-dailybonus
 # Add luci-app-homeconnect
-#git clone https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng.git
-#mv feeds-xiaoqingfeng/luci-app-homeconnect `pwd`/package/lean/
-#mv feeds-xiaoqingfeng/softethervpn5 `pwd`/package/lean/
-#rm -rf feeds-xiaoqingfeng
+git clone https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng.git
+mv feeds-xiaoqingfeng/luci-app-homeconnect `pwd`/package/lean/
+mv feeds-xiaoqingfeng/softethervpn5 `pwd`/package/lean/
+rm -rf feeds-xiaoqingfeng
 
 
 # From xiaoqingfengATGH/homeclash: homeclash
@@ -98,3 +94,8 @@ rm -rf openwrt-package
 #git clone https://github.com/xiaoqingfengATGH/homeclash
 #cp -r homeclash/luci-app-openclash `pwd`/package/lean/
 #rm -rf homeclash
+
+
+## Add luci-app-jd-dailybonus
+#git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git `pwd`/package/lean/luci-app-jd-dailybonus
+
