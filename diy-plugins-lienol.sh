@@ -83,10 +83,10 @@ rm -rf openwrt-package
 
 # From xiaoqingfengATGH/feeds-xiaoqingfeng: homeconnect,ssr+,smartdns,serverchan,jd-dailybonus
 # Add luci-app-homeconnect
-git clone https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng.git
-mv feeds-xiaoqingfeng/luci-app-homeconnect `pwd`/package/lean/
-mv feeds-xiaoqingfeng/softethervpn5 `pwd`/package/lean/
-rm -rf feeds-xiaoqingfeng
+#git clone https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng.git
+#mv feeds-xiaoqingfeng/luci-app-homeconnect `pwd`/package/lean/
+#mv feeds-xiaoqingfeng/softethervpn5 `pwd`/package/lean/
+#rm -rf feeds-xiaoqingfeng
 
 
 # From xiaoqingfengATGH/homeclash: homeclash
