@@ -18,9 +18,18 @@ on:
         default: 'true'
 
 env:
-  FEEDS_CONF: feeds.conf.default
+# ----------------------------------------------- Lienol 5.4
+  REPO_URL: https://github.com/Lienol/openwrt
+  REPO_BRANCH: main
+# ----------------------------------------------- Lienol 4.14
+#  REPO_URL: https://github.com/Lienol/openwrt
+#  REPO_BRANCH: 19.07
+  
   DIY_P1_SH: diy-part1-lienol.sh
+  DIY_PLUGINS_SH: diy-plugins-lienol.sh
   DIY_P2_SH: diy-part2.sh
+  
+  FEEDS_CONF: feeds.conf.default
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
@@ -39,14 +48,6 @@ env:
 # ----------------------------------------------- K2P
 #  CONFIG_FILE: k2p.config
 
-# ----------------------------------------------- Lienol 5.4
-  REPO_URL: https://github.com/Lienol/openwrt
-  REPO_BRANCH: main
-  DIY_PLUGINS_SH: diy-plugins-lienol.sh
-# ----------------------------------------------- Lienol 4.14
-#  REPO_URL: https://github.com/Lienol/openwrt
-#  REPO_BRANCH: 19.07
-#  DIY_PLUGINS_SH: diy-plugins-lienol.sh
 
 jobs:
   build:
@@ -84,13 +85,13 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
     - name: Update feeds
-      run: cd openwrt && ./scripts/feeds clean &&./scripts/feeds update -a
+      run: cd openwrt &&./scripts/feeds update -a
 
-    - name: Add offline plugins
+    - name: Add 3rd plugins
       run: |
         chmod +x $DIY_PLUGINS_SH
         cd openwrt
-        $GITHUB_WORKSPACE/$DIY_PLUGINS_SH
+        $GITHUB_WORKSPACE/$DIY_PLUGINS_SH && ./scripts/feeds update -a
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
