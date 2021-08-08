@@ -25,3 +25,6 @@ sed -i '$a src-git xiaoqingfeng https://github.com/xiaoqingfengATGH/feeds-xiaoqi
 
 # Add 3rd packages vernesong: openclash
 sed -i '$a src-git OpenClash https://github.com/vernesong/OpenClash' feeds.conf.default
+
+# Add 3rd packages nxhack: node
+sed -i '$a src-git node https://github.com/nxhack/openwrt-node-packages.git' feeds.conf.default
