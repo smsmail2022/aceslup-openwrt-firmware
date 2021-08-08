@@ -21,13 +21,13 @@ sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds
 #sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 
 # Add 3rd packages homelede: homeconnect,ssr+,smartdns,serverchan,jd-dailybonus
-sed -i '$a src-git xiaoqingfeng https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng' feeds.conf.default
+#sed -i '$a src-git xiaoqingfeng https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng' feeds.conf.default
 
 # Add 3rd packages vernesong: openclash
 sed -i '$a src-git OpenClash https://github.com/vernesong/OpenClash' feeds.conf.default
 
 # Add 3rd packages nxhack: node
-sed -i '$a src-git node https://github.com/nxhack/openwrt-node-packages.git' feeds.conf.default
+#sed -i '$a src-git node https://github.com/nxhack/openwrt-node-packages.git' feeds.conf.default
 
 # Add 3rd packages lean: 
-sed -i '$a src-git lean https://github.com/coolsnowwolf/packages' feeds.conf.default
+#sed -i '$a src-git lean https://github.com/coolsnowwolf/packages' feeds.conf.default
