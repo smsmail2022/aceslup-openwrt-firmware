@@ -18,9 +18,18 @@ on:
         default: 'false'
 
 env:
-  FEEDS_CONF: feeds.conf.default
-  DIY_P1_SH: diy-part1.sh
+# ----------------------------------------------- Lean 5.4
+  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_BRANCH: master
+# ----------------------------------------------- Lean 4.14
+#  REPO_URL: https://github.com/coolsnowwolf/openwrt
+#  REPO_BRANCH: lede-17.01
+
+  DIY_P1_SH: diy-part1-lean.sh
   DIY_P2_SH: diy-part2.sh
+  DIY_PLUGINS_SH: diy-plugins-lean.sh
+  
+  FEEDS_CONF: feeds.conf.default
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
@@ -31,7 +40,7 @@ env:
 # ----------------------------------------------- SSH
 #  CONFIG_FILE: .config
 # ----------------------------------------------- Newifi-D2
-  CONFIG_FILE: newifi-d2.config
+  CONFIG_FILE: lean-newifi-d2.config
 # ----------------------------------------------- HC5661
 #  CONFIG_FILE: hc5661.config
 # ----------------------------------------------- K2
@@ -39,30 +48,6 @@ env:
 # ----------------------------------------------- K2P
 #  CONFIG_FILE: k2p.config
 
-# ----------------------------------------------- Lean 5.4
-  REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
-  DIY_PLUGINS_SH: diy-plugins-lean.sh
-# ----------------------------------------------- Lean 4.14
-#  REPO_URL: https://github.com/coolsnowwolf/openwrt
-#  REPO_BRANCH: lede-17.01
-#  DIY_PLUGINS_SH: diy-plugins-lean.sh
-# ----------------------------------------------- Lienol 5.4
-#  REPO_URL: https://github.com/Lienol/openwrt
-#  REPO_BRANCH: dev-master
-#  DIY_PLUGINS_SH: diy-plugins-lienol.sh
-# ----------------------------------------------- Lienol 4.14
-#  REPO_URL: https://github.com/Lienol/openwrt
-#  REPO_BRANCH: dev-19.07
-#  DIY_PLUGINS_SH: diy-plugins-lienol.sh
-# ----------------------------------------------- HomeLede 4.19.134
-#  REPO_URL: https://github.com/xiaoqingfengATGH/HomeLede.git
-#  REPO_BRANCH: master
-#  DIY_PLUGINS_SH: diy-plugins-homelede.sh
-# ----------------------------------------------- HomeLede 5.4
-#  REPO_URL: https://github.com/xiaoqingfengATGH/HomeLede.git
-#  REPO_BRANCH: k5
-#  DIY_PLUGINS_SH: diy-plugins-homelede.sh
 
 jobs:
   build:
@@ -78,7 +63,7 @@ jobs:
       run: |
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         sudo -E apt-get -qq update
-        sudo -E apt-get -qq install $(curl -fsSL git.io/depends-ubuntu-1804)
+        sudo -E apt-get -qq install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3 python2.7 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf wget curl swig rsync
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
@@ -102,11 +87,11 @@ jobs:
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
-    - name: Add offline plugins
+    - name: Add 3rd plugins
       run: |
         chmod +x $DIY_PLUGINS_SH
         cd openwrt
-        $GITHUB_WORKSPACE/$DIY_PLUGINS_SH
+        $GITHUB_WORKSPACE/$DIY_PLUGINS_SH && ./scripts/feeds update -a
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
