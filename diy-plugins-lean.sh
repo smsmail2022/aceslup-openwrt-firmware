@@ -48,9 +48,9 @@ mv ${GITCLONE_NET}/gowebdav ${LUCI_NET_PATH}/
 # Add luci-app-syncthing
 #mv ${GITCLONE_APP}/luci-app-syncthing ${LUCI_APP_PATH}/
 # Add luci-app-pushbot
-mv ${GITCLONE_APP}/luci-app-pushbot ${LUCI_APP_PATH}/
+#mv ${GITCLONE_APP}/luci-app-pushbot ${LUCI_APP_PATH}/
 # Add luci-app-serverchan
-mv ${GITCLONE_APP}/luci-app-serverchan ${LUCI_APP_PATH}/
+#mv ${GITCLONE_APP}/luci-app-serverchan ${LUCI_APP_PATH}/
 # Add luci-app-ttnode
 mv ${GITCLONE_APP}/luci-app-ttnode ${LUCI_APP_PATH}/
 rm -rf openwrt-package
