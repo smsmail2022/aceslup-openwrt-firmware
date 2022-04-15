@@ -4,7 +4,7 @@
 # Author: kenzo
 #=================================================
 
-name: Lienol
+name: Lienol Newifi3 v2
 
 on:
   repository_dispatch:
