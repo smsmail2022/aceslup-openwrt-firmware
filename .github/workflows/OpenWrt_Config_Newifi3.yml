@@ -31,9 +31,8 @@ env:
   TZ: Asia/Shanghai
 
 jobs:
-  config:
+  build:
     runs-on: Ubuntu-20.04
-    if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
     - name: 检查
@@ -91,7 +90,7 @@ jobs:
       run: |
         cd openwrt
         mkdir -p /tmp/upload
-        cp .config /tmp/upload/${{ env.CONFIG_FILE }}
+        cp .config /tmp/upload/$CONFIG_FILE
 
     - name: 上传配置文件
       uses: actions/upload-artifact@main
