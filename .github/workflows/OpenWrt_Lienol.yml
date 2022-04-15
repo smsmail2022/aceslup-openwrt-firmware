@@ -19,11 +19,11 @@ on:
 
 env:
 # ----------------------------------------------- Lienol 5.4
-  REPO_URL: https://github.com/Lienol/openwrt
-  REPO_BRANCH: main
-# ----------------------------------------------- Lienol 4.14
 #  REPO_URL: https://github.com/Lienol/openwrt
-#  REPO_BRANCH: 19.07
+#  REPO_BRANCH: main
+# ----------------------------------------------- Lienol 4.14
+  REPO_URL: https://github.com/Lienol/openwrt
+  REPO_BRANCH: 19.07
   
   DIY_P1_SH: diy-part1-lienol.sh
   DIY_PLUGINS_SH: diy-plugins-lienol.sh
@@ -51,7 +51,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
 
     steps:
     - name: Checkout
