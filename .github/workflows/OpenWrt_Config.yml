@@ -39,7 +39,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [Lienol]
+        target: [Config]
     
     steps:
     - name: 检查
