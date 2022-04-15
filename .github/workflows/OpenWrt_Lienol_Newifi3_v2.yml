@@ -22,6 +22,7 @@ env:
 #  REPO_BRANCH: 22.03
 #  REPO_BRANCH: master
 
+  CONFIG_FILE: lienol-newifi3.config
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
