@@ -19,6 +19,7 @@ sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds
 # Add 3rd packages kenzok8: passwall,ssr+,vssr,gost,smartdns,serverchan,jd-dailybonus
 #sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 #sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+#sed -i '$a src-git small-latest https://github.com/kenzok8/small-package' feeds.conf.default
 
 # Add 3rd packages homelede: homeconnect,ssr+,smartdns,serverchan,jd-dailybonus
 #sed -i '$a src-git xiaoqingfeng https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng' feeds.conf.default
