@@ -31,7 +31,7 @@ env:
   TZ: Asia/Shanghai
 
 jobs:
-  merge:
+  config:
     runs-on: Ubuntu-20.04
     if: github.event.repository.owner.id == github.event.sender.id
 
