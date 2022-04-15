@@ -4,7 +4,7 @@
 # Author: kenzo
 #=================================================
 
-name: Lienol Newifi3
+name: Lienol Newifi3 .config
 
 on:
   repository_dispatch:
@@ -35,12 +35,6 @@ jobs:
     runs-on: Ubuntu-20.04
     if: github.event.repository.owner.id == github.event.sender.id
 
-    name: Build ${{matrix.target}}
-    strategy:
-      fail-fast: false
-      matrix:
-        target: [Config]
-    
     steps:
     - name: 检查
       uses: actions/checkout@main
