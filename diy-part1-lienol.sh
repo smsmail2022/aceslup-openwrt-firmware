@@ -10,21 +10,22 @@
 
 # Add 3rd packages lean: ssr+
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
+#sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
 
 # Add 3rd packages lienol: passwall,syncthing
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
-sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
+#sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
 
 # Add 3rd packages kenzok8: passwall,ssr+,vssr,gost,smartdns,serverchan,jd-dailybonus
 #sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 #sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+sed -i '$a src-git small-latest https://github.com/kenzok8/small-package' feeds.conf.default
 
 # Add 3rd packages homelede: homeconnect,ssr+,smartdns,serverchan,jd-dailybonus
 #sed -i '$a src-git xiaoqingfeng https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng' feeds.conf.default
 
 # Add 3rd packages vernesong: openclash
-sed -i '$a src-git OpenClash https://github.com/vernesong/OpenClash' feeds.conf.default
+#sed -i '$a src-git OpenClash https://github.com/vernesong/OpenClash' feeds.conf.default
 
 # Add 3rd packages nxhack: node
 #sed -i '$a src-git node https://github.com/nxhack/openwrt-node-packages.git' feeds.conf.default
