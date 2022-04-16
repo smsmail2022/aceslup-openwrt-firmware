@@ -15,7 +15,7 @@ on:
       ssh:
         description: 'SSH connection to Actions'
         required: false
-        default: 'true'
+        default: 'false'
 
 env:
   REPO_URL: https://github.com/Lienol/openwrt
@@ -37,9 +37,9 @@ env:
   TZ: Asia/Shanghai
 
 # ----------------------------------------------- SSH
-  CONFIG_FILE: .config
+#  CONFIG_FILE: .config
 # ----------------------------------------------- Newifi-D2
-#  CONFIG_FILE: newifi-d2.config
+  CONFIG_FILE: lienol-newifi3.config
 # ----------------------------------------------- HC5661
 #  CONFIG_FILE: hc5661.config
 # ----------------------------------------------- K2
