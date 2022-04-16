@@ -4,7 +4,7 @@
 # Author: kenzo
 #=================================================
 
-name: Lienol Newifi3 .config
+name: OpenWrt Lienol Newifi3 .config
 
 on:
   repository_dispatch:
