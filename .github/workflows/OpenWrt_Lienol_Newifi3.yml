@@ -18,12 +18,11 @@ on:
         default: 'false'
 
 env:
-# ----------------------------------------------- Lienol 5.4
   REPO_URL: https://github.com/Lienol/openwrt
-  REPO_BRANCH: main
-# ----------------------------------------------- Lienol 4.14
-#  REPO_URL: https://github.com/Lienol/openwrt
-#  REPO_BRANCH: 19.07
+  REPO_BRANCH: 19.07
+#  REPO_BRANCH: 21.02
+#  REPO_BRANCH: 22.03
+#  REPO_BRANCH: master
   
   DIY_P1_SH: diy-part1-lienol.sh
   DIY_PLUGINS_SH: diy-plugins-lienol.sh
