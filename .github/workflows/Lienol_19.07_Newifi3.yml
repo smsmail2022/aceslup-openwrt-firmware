@@ -55,7 +55,10 @@ jobs:
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean ) &
-        sudo timedatectl set-timezone "$TZ"         
+        sudo timedatectl set-timezone "$TZ" 
+        
+        sudo mkdir -p /workdir
+        sudo chown $USER:$GROUPS /workdir
         
     - name: 克隆源代码
       working-directory: /workdir
@@ -75,7 +78,6 @@ jobs:
       working-directory: ./openwrt
       run: |
         ./scripts/feeds update -a
-        ./scripts/feeds clean
         ./scripts/feeds install -a
 
     - name: 自定义配置
