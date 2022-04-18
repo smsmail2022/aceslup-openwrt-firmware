@@ -18,18 +18,15 @@ on:
         default: 'false'
 
 env:
-  CONFIG_FILE: lean-newifi3.config
   REPO_URL: https://github.com/coolsnowwolf/lede
-# ----------------------------------------------- Lean 5.4
   REPO_BRANCH: master
-# ----------------------------------------------- Lean 4.14
-#  REPO_BRANCH: lede-17.01
 
+  CONFIG_FILE: lean-newifi3.config
+
+  FEEDS_CONF: feeds.conf.default
   DIY_P1_SH: diy-part1-lean.sh
   DIY_P2_SH: diy-part2.sh
-  DIY_PLUGINS_SH: diy-plugins-lean.sh
   
-  FEEDS_CONF: feeds.conf.default
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
