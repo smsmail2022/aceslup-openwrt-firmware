@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: OpenWrt Lean Newifi3
+name: Lean Newifi3
 
 on:
   repository_dispatch:
