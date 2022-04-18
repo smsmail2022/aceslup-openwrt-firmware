@@ -70,8 +70,8 @@ jobs:
         sh -x $GITHUB_WORKSPACE/$DIY_P1_SH
       
     - name: 更新 & 安装 feeds
+      working-directory: /workdir/openwrt
       run: |
-        cd openwrt
         ./scripts/feeds update -a
         ./scripts/feeds install -a
 
@@ -91,7 +91,7 @@ jobs:
 
     - name: 下载软件包
       id: package
-      working-directory: ./openwrt
+      working-directory: /workdir/openwrt
       run: |
         make defconfig
         make download -j$(nproc)
@@ -100,7 +100,7 @@ jobs:
 
     - name: 编译固件
       id: compile
-      working-directory: ./openwrt
+      working-directory: /workdir/openwrt
       run: |
         echo -e "$(nproc) thread compile"
         make -j$(nproc) || make -j1 || make -j1 V=s
