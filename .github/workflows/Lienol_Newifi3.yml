@@ -55,6 +55,7 @@ jobs:
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
+        
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
 
@@ -68,24 +69,21 @@ jobs:
     - name: 自定义安装源
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
-        chmod +x $DIY_P1_SH
         cd openwrt
-        $GITHUB_WORKSPACE/$DIY_P1_SH
+        sh -x $GITHUB_WORKSPACE/$DIY_P1_SH
       
     - name: 更新 & 安装 feeds
-      working-directory: ./openwrt
       run: |
+        cd openwrt
         ./scripts/feeds update -a
-        ./scripts/feeds clean
         ./scripts/feeds install -a
         
     - name: 自定义配置
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        chmod +x $DIY_P2_SH
         cd openwrt
-        $GITHUB_WORKSPACE/$DIY_P2_SH
+        sh -x $GITHUB_WORKSPACE/$DIY_P2_SH
 
     - name: SSH 连接 to Actions
       uses: P3TERX/ssh2actions@v1.0.0
@@ -96,17 +94,17 @@ jobs:
 
     - name: 下载软件包
       id: package
+      working-directory: ./openwrt
       run: |
-        cd openwrt
         make defconfig
-        make download -j8
+        make download -j$(nproc)
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
 
     - name: 编译固件
       id: compile
+      working-directory: ./openwrt
       run: |
-        cd openwrt
         echo -e "$(nproc) thread compile"
         make -j$(nproc) || make -j1 || make -j1 V=s
         echo "::set-output name=status::success"
