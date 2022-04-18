@@ -64,24 +64,23 @@ jobs:
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         
     - name: 自定义安装源
-      working-directory: ./openwrt
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
-        chmod +x $DIY_P1_SH
-        $GITHUB_WORKSPACE/$DIY_P1_SH
+        cd openwrt
+        sh -x $GITHUB_WORKSPACE/$DIY_P1_SH
       
     - name: 更新 & 安装 feeds
-      working-directory: ./openwrt
       run: |
+        cd openwrt
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         
     - name: 自定义配置
-      working-directory: ./openwrt
       run: |
         [ -e files ] && mv files openwrt/files
-        chmod +x $DIY_P2_SH
-        $GITHUB_WORKSPACE/$DIY_P2_SH
+        [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+        cd openwrt
+        sh -x $GITHUB_WORKSPACE/$DIY_P2_SH
  
     - name: SSH 连接 to Actions
       uses: P3TERX/ssh2actions@v1.0.0
