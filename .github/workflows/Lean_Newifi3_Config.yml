@@ -68,7 +68,6 @@ jobs:
       working-directory: ./openwrt
       run: |
         ./scripts/feeds update -a
-        ./scripts/feeds clean
         ./scripts/feeds install -a
         
     - name: 自定义配置
