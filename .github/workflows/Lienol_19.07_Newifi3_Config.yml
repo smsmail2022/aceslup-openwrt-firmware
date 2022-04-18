@@ -61,25 +61,24 @@ jobs:
         git clone -b $REPO_BRANCH --single-branch $REPO_URL openwrt
         
     - name: 自定义安装源
+      working-directory: ./openwrt
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
         chmod +x $DIY_P1_SH
-        cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
       
     - name: 更新 & 安装 feeds
       working-directory: ./openwrt
       run: |
         ./scripts/feeds update -a
-        ./scripts/feeds clean
         ./scripts/feeds install -a
         
     - name: 自定义配置
+      working-directory: ./openwrt
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_P2_SH
-        cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
  
     - name: SSH 连接 to Actions
