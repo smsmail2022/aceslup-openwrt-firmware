@@ -142,6 +142,6 @@ sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.con
 
 #【openwrt】：syncthing
 mkdir tmp
-git clone https://github.com/openwrt/packages `pwd`/tmp
-mv `pwd`/tmp/utils/syncthing `pwd`/package/utils/
+git clone https://github.com/openwrt/packages `pwd`/tmp/
+mv `pwd`/tmp/packages/utils/syncthing `pwd`/package/lean/
 rm -rf tmp
