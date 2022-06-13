@@ -142,7 +142,10 @@ sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.con
 
 
 #【openwrt】：syncthing
+pwd
 mkdir -pv tmp
 git clone https://github.com/openwrt/packages ./tmp/
-mv ./tmp/utils/syncthing ./openwrt/package/feeds/smpackage/
+ls ./tmp/
+ls ./tmp/utils/
+mv ./tmp/utils/syncthing ./openwrt/package/utils/
 rm -rf tmp
