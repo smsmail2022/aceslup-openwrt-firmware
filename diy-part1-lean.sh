@@ -138,3 +138,10 @@ sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.con
 
 #【jerrykuku】：luci-app-jd-dailybonus
 #git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git `pwd`/package/lean/luci-app-jd-dailybonus
+
+
+#【openwrt】：syncthing
+mkdir tmp
+git clone https://github.com/openwrt/packages `pwd`/tmp
+mv `pwd`/tmp/utils/syncthing `pwd`/package/utils/
+rm -rf tmp
