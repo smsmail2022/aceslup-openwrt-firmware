@@ -141,8 +141,9 @@ sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.con
 
 
 
-#【openwrt】：syncthing
+#【openwrt/packages】：syncthing
 # PWD=/home/runner/work/openwrt-firmware/openwrt-firmware/openwrt
 git clone https://github.com/openwrt/packages ./tmp/
+mv ./tmp/lang/golang ./package/
 mv ./tmp/utils/syncthing ./package/utils/
 rm -rf tmp
