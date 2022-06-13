@@ -140,8 +140,9 @@ sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.con
 #git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git `pwd`/package/lean/luci-app-jd-dailybonus
 
 
+
 #【openwrt】：syncthing
-mkdir tmp
-git clone https://github.com/openwrt/packages `pwd`/tmp/
-mv `pwd`/tmp/packages/utils/syncthing `pwd`/package/lean/
+mkdir -pv tmp
+git clone https://github.com/openwrt/packages ./tmp/
+mv ./tmp/utils/syncthing ./openwrt/package/feeds/smpackage/
 rm -rf tmp
