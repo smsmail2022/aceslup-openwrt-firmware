@@ -146,5 +146,5 @@ sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.con
 git clone https://github.com/openwrt/packages ./tmp/
 mv ./tmp/lang ./package/
 mv ./tmp/utils/syncthing ./package/utils/
-rm -rf ./package/utils/syncthing/root/etc/{config,init.d}/
+rm -rf ./package/utils/syncthing/files/etc/{config,init.d}/
 rm -rf tmp
