@@ -14,6 +14,15 @@
 #sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
 #sed -i '$a src-git lean https://github.com/coolsnowwolf/packages' feeds.conf.default
 
+# 【lean】：去掉无刚需的默认插件
+sed -e 's/ddns-scripts_aliyun//g' \
+    -e 's/ddns-scripts_dnspod//g' \
+    -e 's/luci-app-ddns//g' \
+    -e 's/luci-app-vsftpd//g' \
+    -e 's/luci-app-accesscontrol//g' \
+    -e 's/luci-app-nlbwmon//g' \
+    -e 's/coremark//g' -i ./include/target.mk
+
 
 #【lienol】: passwall,syncthing
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
@@ -150,3 +159,4 @@ rm -rf ./package/utils/syncthing/files/etc/config/syncthing
 rm -rf ./package/utils/syncthing/files/etc/init.d/syncthing
 tree ./package/utils/syncthing
 rm -rf tmp
+
