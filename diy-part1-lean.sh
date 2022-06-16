@@ -15,7 +15,7 @@
 #sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
 #sed -i '$a src-git lean https://github.com/coolsnowwolf/packages' feeds.conf.default
 
-# 【lean】：去掉无刚需的默认插件
+#【lean】：去掉无刚需的默认插件
 sed -e 's/ddns-scripts_aliyun//g' \
     -e 's/ddns-scripts_dnspod//g' \
     -e 's/luci-app-ddns//g' \
@@ -23,6 +23,11 @@ sed -e 's/ddns-scripts_aliyun//g' \
     -e 's/luci-app-accesscontrol//g' \
     -e 's/luci-app-nlbwmon//g' \
     -e 's/coremark//g' -i ./include/target.mk
+
+#【coolsnowwolf/packages】：syncthing
+rm -rf ./feeds/packages/utils/syncthing/files/etc/config/syncthing
+rm -rf ./feeds/packages/utils/syncthing/files/etc/init.d/syncthing
+tree ./feeds/packages/utils/syncthing
 
 
 #【lienol】: passwall,syncthing
@@ -33,7 +38,8 @@ sed -e 's/ddns-scripts_aliyun//g' \
 #【kenzok8】: passwall,ssr+,vssr,gost,smartdns,serverchan,jd-dailybonus
 #sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 #sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
-# 追新软件包
+
+#【kenzok8】: 追新软件包
 # PATH=/home/runner/work/openwrt-firmware/openwrt-firmware/openwrt/feeds/smpackage
 sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
 
@@ -151,13 +157,12 @@ sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.con
 #git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git `pwd`/package/lean/luci-app-jd-dailybonus
 
 
-
 #【openwrt/packages】：syncthing
 # PWD=/home/runner/work/openwrt-firmware/openwrt-firmware/openwrt
-git clone https://github.com/openwrt/packages ./tmp/
-mv ./tmp/utils/syncthing ./feeds/packages/utils/
-rm -rf ./feeds/packages/utils/syncthing/files/etc/config/syncthing
-rm -rf ./feeds/packages/utils/syncthing/files/etc/init.d/syncthing
-tree ./feeds/packages/utils/syncthing
-rm -rf tmp
+# git clone https://github.com/openwrt/packages ./tmp/
+# mv ./tmp/utils/syncthing ./feeds/packages/utils/
+#rm -rf ./feeds/packages/utils/syncthing/files/etc/config/syncthing
+#rm -rf ./feeds/packages/utils/syncthing/files/etc/init.d/syncthing
+#tree ./feeds/packages/utils/syncthing
+#rm -rf tmp
 
