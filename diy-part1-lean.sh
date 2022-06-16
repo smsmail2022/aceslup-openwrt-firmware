@@ -7,6 +7,7 @@
 # Author: P3TERX
 # Blog: https://p3terx.com
 #=============================================================
+# PWD=/home/runner/work/openwrt-firmware/openwrt-firmware/openwrt
 
 
 #【lean】: ssr+
@@ -33,6 +34,7 @@ sed -e 's/ddns-scripts_aliyun//g' \
 #sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 #sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 # 追新软件包
+# PATH=/home/runner/work/openwrt-firmware/openwrt-firmware/openwrt/feeds/smpackage
 sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
 
 
@@ -153,10 +155,9 @@ sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.con
 #【openwrt/packages】：syncthing
 # PWD=/home/runner/work/openwrt-firmware/openwrt-firmware/openwrt
 git clone https://github.com/openwrt/packages ./tmp/
-mv ./tmp/lang ./package/
-mv ./tmp/utils/syncthing ./package/utils/
-rm -rf ./package/utils/syncthing/files/etc/config/syncthing
-rm -rf ./package/utils/syncthing/files/etc/init.d/syncthing
-tree ./package/utils/syncthing
+mv ./tmp/utils/syncthing ./feeds/packages/utils/
+rm -rf ./feeds/packages/utils/syncthing/files/etc/config/syncthing
+rm -rf ./feeds/packages/utils/syncthing/files/etc/init.d/syncthing
+tree ./feeds/packages/utils/syncthing
 rm -rf tmp
 
