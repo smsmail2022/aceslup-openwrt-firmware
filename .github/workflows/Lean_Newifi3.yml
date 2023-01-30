@@ -10,6 +10,8 @@ name: Lean Newifi3
 
 on:
   repository_dispatch:
+  schedule:
+    - cron: '0 16 * * 5'
   workflow_dispatch:
     inputs:
       ssh:
